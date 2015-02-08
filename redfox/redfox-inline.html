@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Redfox / Arctic fox</title>
+        <style>
+            #wrapper {
+                height: 320px;
+                width: 320px;
+                margin: auto;
+            }
+
+            svg {
+                height: 100%;
+                width: auto;
+            }
+
+            #redfox {
+                stroke: none;
+                fill: black;
+
+                
+            }
+
+            #redfox, #redfox path {
+                -webkit-transition: fill 1s ease;
+                -moz-transition: fill 1s ease;
+                -o-transition: fill 1s ease;
+                   transition: fill 1s ease;
+            }
+
+            #fox-body, #fox-shadow {
+                fill: OrangeRed;
+            }
+
+            #fox-light {
+                fill: OldLace;
+            }
+
+            #fox-glow {
+                fill: Tomato;
+            }
+
+            #redfox:hover {
+                fill: DarkSlateGray;
+            }
+            #redfox:hover #fox-body, #redfox:hover #fox-shadow {
+                fill: MediumTurquoise;
+            }
+
+            #redfox:hover #fox-light {
+                fill: WhiteSmoke;
+            }
+
+            #redfox:hover #fox-glow {
+                fill: PaleTurquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <svg id="redfox" viewBox="0 0 100 100">
+                <defs>
+                    <g id="fox-chest">
+                        <path d="M 40 30 L 40 45 L 35 50 Z" />
+                        <path d="M 50 60 L 45 55 L 50 50 L 45 45 L 40 45 L 50 40 Z" />
+                        <path d="M 35 50 L 50 60 L 50 90 L 45 95 L 45 90 Z" />
+                    </g>
+                    <g id="fox-front-pow">
+                        <path d="M 45 75 L 50 80 L 50 90 L 45 95 Z" />
+                    </g>
+                    <g id="fox-eye">
+                        <ellipse cx="42.5" cy="50" rx="2.5" ry="1.25" />
+                    </g>
+                </defs>
+                
+                <g id="fox-body">
+                    <path d="M 50 50 L 50 85 L 25 85 L 25 75 Z" />
+                </g>
+
+                <g id="fox-light">
+                    <path id="fox-panache" d="M 15 35 L 25 55 L 10 55 L 5 50 L 10 40 Z"  />
+                    <path id="fox-face" d="M 35 50 L 40 30 L 50 40 L 60 30 L 65 50 L 50 60 Z" />
+                </g>
+
+                <g id="fox-glow">
+                    <path id="fox-rear" d="M 25 80 L 25 55 L 20 50 L 20 55 L 15 50 L 15 55 L 10 50 L 10 55 L 5 50 L 10 65 Z" />
+                    <use xlink:href="#fox-chest" />
+                </g>
+
+                <g id="fox-shadow">
+                    <use xlink:href="#fox-chest" transform="translate(100, 0) scale(-1, 1)"  />
+                </g>
+                
+                <g id="fox-dark">
+                    <g id="fox-pows">
+                        <use xlink:href="#fox-front-pow" />
+                        <use xlink:href="#fox-front-pow" transform="translate(100, 0) scale(-1, 1)" />
+                        <path d="M 25 80 L 35 90 L 25 85 Z" />
+                    </g>
+
+                    <g id="fox-face">
+                        <use xlink:href="#fox-eye" />
+                        <use xlink:href="#fox-eye" transform="translate(100, 0) scale(-1, 1)" />
+                        <circle id="fox-nose" cx="50" cy="58" r="1.25" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </body>
