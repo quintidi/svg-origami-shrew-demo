@@ -22,11 +22,11 @@
                     svg, shrew, demo
                 </dc:subject>
 
-                <dc:publisher>Quintidi</dc:publisher>
+                <dc:publisher>Vuzonp</dc:publisher>
                 <dc:creator>Thomas Girard</dc:creator>
                 <dc:rights>Copyright (c) 2014 Thomas Girard</dc:rights>
                 <dc:date>2014-09-12</dc:date>
-                <dc:source>https://github.com/quintidi/svg-origami-shrew-demo</dc:source>
+                <dc:source>https://github.com/vuzonp/svg-demos/tree/master/shrew</dc:source>
                 <dc:format>image/svg+xml</dc:format>
             </rdf:Description>
         </rdf:RDF>
